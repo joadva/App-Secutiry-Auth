@@ -1,0 +1,50 @@
+<ion-content>
+    <div style="display: flex; justify-content: center; margin-top: 4em; margin-bottom: 4rem;">
+        <div class="container">
+            <div><img src="../../assets/img/logo.jpeg" alt="shapes" width="250px"></div>
+        </div>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-title style="text-align: center; text-transform: uppercase;">
+                    iniciar sesión
+                </ion-title>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Email</ion-label>
+                    <!--  <ion-input type="email" [ ngModel]="login.email"></ion-input> -->
+                    <ion-input type="email" [value]="email" (input)="setEmail($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Password</ion-label>
+                    <!-- <ion-input type="password" [(ngModel)]="login.password"></ion-input> -->
+                    <ion-input type="password" [value]="password" (input)="setPassword($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 10px;">
+            <ion-col>
+                <div style="display: flex; align-items: center;">
+                    <ion-checkbox color="dark" slot="start" style="margin: 0 8px 0 5px;"></ion-checkbox>
+                    <ion-label>Recuerdame</ion-label>
+                </div>
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+                <ion-router-link color="secondary" href="#">Olvide contraseña</ion-router-link>
+            </ion-col>
+        </ion-row>
+        <ion-row class="pt-1">
+            <ion-col>
+                <ion-button expand="block" color="primary" (click)="sendLogin()">Iniciar sesión</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

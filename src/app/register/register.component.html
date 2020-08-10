@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-undo-outline" defaultHref="home" color="black" (click)="return()">
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Register
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Name*</ion-label>
+                    <!--  <ion-input type="email" [ ngModel]="login.email"></ion-input> -->
+                    <ion-input type="text" [value]="user.name" (input)="setName($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Last Name*</ion-label>
+                    <!--  <ion-input type="email" [ ngModel]="login.email"></ion-input> -->
+                    <ion-input type="text" [value]="user.last_name" (input)="setLastName($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Email address*</ion-label>
+                    <!--  <ion-input type="email" [ ngModel]="login.email"></ion-input> -->
+                    <ion-input type="email" [value]="user.email" (input)="setemail($event.target.value)" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Confirm Email address*</ion-label>
+                    <!--  <ion-input type="email" [ ngModel]="login.email"></ion-input> -->
+                    <ion-input type="email" [value]="c_email" (input)="setCEmail($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Create Password*</ion-label>
+                    <!-- <ion-input type="password" [(ngModel)]="login.password"></ion-input> -->
+                    <ion-input type="password" [value]="user.password" (input)="setPassword($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label class="bold" position="floating">Confirm Password*</ion-label>
+                    <!-- <ion-input type="password" [(ngModel)]="login.password"></ion-input> -->
+                    <ion-input type="password" [value]="c_password" (input)="setCPassword($event.target.value)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" color="light" (click)="register()">NEXT</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
