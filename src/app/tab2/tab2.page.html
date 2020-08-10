@@ -1,17 +1,55 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Welcome
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large" style="text-align: center;">Welcome</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <div style="display: flex; justify-content: center; height: 15%; align-items: flex-end; margin-top: 80px;">
+        <div class="container">
+            <div><img src="../../assets/img/logo.jpeg" alt="logo" width="170px"></div>
+        </div>
+    </div>
+    <ion-grid>
+        <ion-row style="text-align: center;">
+            <ion-col>
+                {{session.name}}
+            </ion-col>
+        </ion-row>
+        <ion-row style="text-align: center;">
+            <ion-col>
+                Status
+            </ion-col>
+        </ion-row>
+        <ion-row style="text-align: center;">
+            <ion-col>
+                <div class="container">
+                    <div><img src="../../assets/shapes.svg" alt="logo" width="100px"></div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row style="text-align: center;">
+            <ion-col>
+                Go to your checkpoint
+            </ion-col>
+        </ion-row>
+        <ion-row style="text-align: justify;">
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle>Date: 10/08/2020</ion-card-subtitle>
+                        <ion-card-subtitle>Temperature: 36 grade</ion-card-subtitle>
+                        <ion-card-subtitle>Access: Accept</ion-card-subtitle>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

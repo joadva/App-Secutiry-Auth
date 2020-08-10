@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
               public alertController: AlertController,
               private _login: LoginService,
               public loadingController: LoadingController) {
-    this.email= "";
-    this.password="";
+    this.email= "alpa@gmail.com";
+    this.password="Zafiro14";
    }
 
    sendLogin(){
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
            }
            if(res.code == 200){
             localStorage.setItem('user', JSON.stringify(res.user));
-            this.router.navigateByUrl('/home');
+            this.router.navigateByUrl('/home/tabs/tab2');
            }
            console.log(res);
            
