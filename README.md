@@ -55,6 +55,12 @@ You can view and running on your local dev environment in 5 minutes with these f
 
    Your site is now running at `http://localhost:8000`
 
+Login
+
+user : Admin
+
+password : 123
+
 ## Backend
 
 **Clone project.**
