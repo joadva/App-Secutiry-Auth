@@ -11,9 +11,9 @@ export class LoginService {
 
    }
 
-   login(user: any){
+   login<T>(user: any){
      const pathLogin = "/api/user/login";
-     return this._http.post(urlAPI+pathLogin, {
+     return <any>this._http.post(urlAPI+pathLogin, {
        email: user.email,
        password: user.password
      });

@@ -11,10 +11,10 @@ export class RegisterService {
 
    }
 
-   registerUser(user: any){
+   registerUser<T>(user: any){
      const pathRegister = "/api/user/register-user";
 
-     return this._http.post(urlAPI+pathRegister,{ 
+     return <any>this._http.post(urlAPI+pathRegister,{ 
        first_name: user.name, 
        last_name: user.last_name, 
        email: user.email, 
